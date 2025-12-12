@@ -3,6 +3,8 @@
 #include "stack.h"
 #include <string.h>
 
+
+
 Stack * create_stack(int initial_size)
 {
 	Stack * s = (Stack *)malloc(sizeof(Stack));
@@ -33,6 +35,8 @@ void push(Stack * stack, Item i)
 		reallocate(stack);
 	stack->contents[stack->top++] = i;
 	printf("--Pushded: %d\n", i);
+
+	printf("push 함수를 수행하였습니다.");
 }
 
 Item pop(Stack * stack)
